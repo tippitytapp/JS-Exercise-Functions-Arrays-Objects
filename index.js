@@ -186,8 +186,11 @@ return `This is a ${lastCar.car_make} ${lastCar.car_model}`
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, id) {
+  const carId = inventory.find((iventory, id) => {
+    return id === id;
+  })
+  return `This is a ${carId.car_make} ${carId.car_model}`
 }
 
 /**
@@ -198,8 +201,15 @@ function getCarInfoById(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
-  /* code here */
+function sortCarInventory(inventory) {
+  let sortOrder = 1;
+  if (inventory[0] === "-"){
+    sortOrder = -1;
+    inventory=inventory.substr(1);
+  }
+  return function (a,b){
+    if (sortOrder ==-1){
+      return b[inventory].localeCompare(a[
 }
 
 /**
