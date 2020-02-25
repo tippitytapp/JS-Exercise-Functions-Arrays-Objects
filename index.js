@@ -298,10 +298,14 @@ function carMaker(num){
   const carOdo = {
     odometer: num,
     drive: function (distance){
-      carOdo.odometer= this.odometer + distance;
-    },
-  }; return carOdo;
+      carOdo.odometer += distance;
+      return this.odometer;
+    }
+  }
+  return carOdo;
 }
+
+
 
 
 /// ////// END OF CHALLENGE /////////
